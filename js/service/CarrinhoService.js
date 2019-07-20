@@ -13,7 +13,6 @@ class CarrinhoService {
         let carrinho = CarrinhoService.carregarCarrinho()
         carrinho.push(item)
         CarrinhoService.setCarrinho(carrinho)
-        alert("Produto adicionado com sucesso!")
     }
 
     static setCarrinho(carrinho){

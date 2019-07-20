@@ -17,12 +17,20 @@ class ProdutoService {
         }
     }
 
-    static selecionarProduto(produto){
+    static selecionarProduto(produto) {
         localStorage.setItem("produtoSelecionado", JSON.stringify(produto))
     }
 
     static buscarProdutoSelecionado() {
         return JSON.parse(localStorage.getItem("produtoSelecionado"))
     }
+
+    static cadastrar(produto) {
+        let cadastrados = ProdutoService.buscarTodos();
+        cadastrados.push(produto)
+        localStorage.setItem('produtos', JSON.stringify(cadastrados))
+    }
+
+
 }
 

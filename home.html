@@ -12,7 +12,7 @@
     <script src="js/controller/HomeController.js"></script>
 </head>
 
-<body onload="listarProdutos()">
+<body onload="listarProdutos()" style="opacity: 0">
     <header>
         <nav class="navbar">
             <div>
@@ -24,6 +24,7 @@
     </header>
 
     <section id="produtos"></section>
+
 </body>
 
 <footer class="footer"></footer>
@@ -43,11 +44,21 @@
                     </div>
                 </a>
             </div>
+
             <div class="menu-item">
                 <a href="carrinho.html">
                     <div>
                         <img src="img/cart.svg" alt="ícone para home">
                         Carrinho
+                    </div>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <a href="novo-produto.html">
+                    <div>
+                        <img src="img/home.svg" alt="ícone para novo produto">
+                        Novo Produto
                     </div>
                 </a>
             </div>

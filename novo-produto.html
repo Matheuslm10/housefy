@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Novo Produto - Housefy</title>
+    <link rel="stylesheet" href="css/reset.css" class="stylesheet">
+    <link rel="stylesheet" href="css/style.css" class="stylesheet">
+    <script src="js/service/ProdutoService.js"></script>
+    
+</head>
+
+<body style="opacity: 0">
+    <header>
+        <nav class="navbar">
+            <div>
+                <img src="img/left-arrow.svg" alt="ícone de menu" onclick="voltar()">
+                <h1 id="navbarTitle">Novo Produto</h1>
+            </div>
+        </nav>
+    </header>
+
+    <section class="novo-produto">
+        <form>
+            <input type="text" id="imagem" placeholder="Imagem do produto">
+            <input type="text" id="nome" placeholder="Nome do produto">
+            <input type="text" id="descricao" placeholder="Descrição do produto">
+            <input type="text" id="preco" placeholder="Preço do produto">
+
+            <button type="button" onclick="salvar()">Salvar</button>
+            <button type="button">Cancelar</button>
+        </form>
+    </section>
+
+    <script src="js/controller/NovoProdutoController.js"></script>
+</body>
+
+</html>

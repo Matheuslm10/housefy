@@ -1,7 +1,9 @@
 let produtosCadastrados = ProdutoService.buscarTodos()
 
 function listarProdutos() {
-    
+
+    document.querySelector('body').style.animation = "zoom-out 0.5s"
+
     for (let i = 0; i < produtosCadastrados.length; i++) {
 
         const element = produtosCadastrados[i];
@@ -20,11 +22,17 @@ function listarProdutos() {
             
             `
     }
+    setTimeout(() => {
+        document.querySelector('body').style.opacity = 1
+    }, 500);
 }
 
 function selecionarProdutos(i) {
     ProdutoService.selecionarProduto(produtosCadastrados[i])
-    location.href = "produto.html"
+    document.querySelector('body').style.animation = "zoom-in 0.5s"
+    setTimeout(() => {
+        location.href = "produto.html"
+    }, 450);
 }
 
 function openDrawer() {
@@ -44,5 +52,5 @@ function closeDrawer() {
         document.querySelector('body').style.overflowY = 'scroll'
     }, 300);
 
-    
+
 }
